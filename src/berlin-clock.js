@@ -1,3 +1,7 @@
-function berlinClock() {
-  return '';
+function berlinClock(timestamp) {
+    return '';
 }
+
+module.exports = {
+    berlinClock,
+};
