@@ -1,9 +1,9 @@
-const berlinClock = require('../src/berlin-clock');
+const berlin = require('../src/berlin-clock');
 
 describe('First story', () => {
-  test('GIVEN ... WHEN ... THEN ...', () => {
-    expect(berlinClock.berlinClock()).toStrictEqual();
-  });
+    test('GIVEN ... WHEN ... THEN ...', () => {
+        expect(berlin.berlinClock()).toStrictEqual();
+    });
 });
 
 

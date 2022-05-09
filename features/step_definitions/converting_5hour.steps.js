@@ -1,20 +1,21 @@
 const { Given, When, Then, And, But, Fusion } = require('jest-cucumber-fusion')
-const berlinClock = require('../../src/berlin-clock')
+const { BerlinClock } = require('../../src/berlin-clock')
+let berlinClock;
 let result;
 let timestamp;
 
-test('Converting 5-hour', () => {
-  Given(/^Given the timestamp (.*)$/, timestamp => {
-    this.timestamp = timestamp;
-  });
+Before(() => { berlinClock = new BerlinClock() })
 
-  When('converting it to Berlin time', () => {
-    this.result = berlinClock(this.timestamp);
-  });
-
-  Then(/^I sell the (.*)$/, fiveHourLights => {
-    expect(this.result).toStrictEqual(fiveHourLights);
-  });
-
-  Fusion('../converting_5hour.feature')
+Given(/^Given the timestamp (.*)$/, timestamp => {
+    timestamp = timestamp;
 });
+
+When('converting it to Berlin time', () => {
+    result = berlinClock(timestamp);
+});
+
+Then(/^I sell the (.*)$/, fiveHourLights => {
+    expect(result).toStrictEqual(fiveHourLights);
+});
+
+Fusion('../converting_5hour.feature')
