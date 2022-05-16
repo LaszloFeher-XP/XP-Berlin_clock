@@ -19,6 +19,9 @@
 - Write unit tests for the Feature/Scenario "Converting 5-hour/Converting 5-hour" 🚧
 - GIVEN the timestamp is 00:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ❌
 - GIVEN the timestamp is 00:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ✅
-GIVEN the timestamp is 05:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows 🔴⚫⚫⚫ ❌### Pomodoro 🍅 1
-- User story #1 🚧
-  - Scenario #1 - hour 2nd example red phase
+-GIVEN the timestamp is 05:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows 🔴⚫⚫⚫ ❌
+-GIVEN the timestamp is 05:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows 🔴⚫⚫⚫ ✅
+
+## 3. Pomodoro
+- refactor unit tests with using emojis
+- GIVEN the timestamp is 00:04:03 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ❌

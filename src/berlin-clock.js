@@ -1,12 +1,12 @@
 function berlinClock(timestamp) {
-    return '';
+    return berlinClockFiveHour(timestamp);
 }
 
 function berlinClockFiveHour(timestamp) {
     if (timestamp == '00:00:00') {
-        return 'OOOO';
+        return '⚫⚫⚫⚫';
     }
-    return 'ROOO';
+    return '🔴⚫⚫⚫';
 }
 
 module.exports = {
