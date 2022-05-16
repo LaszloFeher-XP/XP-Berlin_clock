@@ -1,8 +1,8 @@
 const berlinClock = require('../src/berlin-clock');
 
-describe('First story', () => {
-    test('GIVEN ... WHEN ... THEN ...', () => {
-        expect(berlinClock()).toStrictEqual();
+describe('Converting 5-hour', () => {
+    test('GIVEN the timestamp is 00:00:00 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫', () => {
+        expect(berlinClockFiveHour('00:00:00')).toStrictEqual('OOOO');
     });
 });
 

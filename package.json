@@ -1,57 +1,58 @@
 {
-  "name": "codewars-kata",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "complexity": "cr src",
-    "prepare": "husky install",
-    "cm": "cz",
-    "test:coverage": "npm test --watchAll --collect-coverage --verbose",
-    "test:badges": "npm run test:coverage  && jest-coverage-badges",
-    "create-badges": "jest-coverage-badges"
-  },
-  "keywords": [],
-  "author": "Laszlo Feher",
-  "license": "ISC",
-  "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
-    "@cucumber/cucumber": "^8.1.2",
-    "commitizen": "^4.2.4",
-    "complexity-report": "^2.0.0-alpha",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.29.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
-    "jest": "^27.0.4",
-    "jest-cucumber-fusion": "^0.8.1",
-    "prettier": "^2.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    "name": "codewars-kata",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "complexity": "cr src",
+        "prepare": "husky install",
+        "cm": "cz",
+        "test:coverage": "npm test --watchAll --collect-coverage --verbose",
+        "test:badges": "npm run test:coverage  && jest-coverage-badges",
+        "create-badges": "jest-coverage-badges"
+    },
+    "keywords": [],
+    "author": "Laszlo Feher",
+    "license": "ISC",
+    "devDependencies": {
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
+        "@cucumber/cucumber": "^8.1.2",
+        "commitizen": "^4.2.4",
+        "complexity-report": "^2.0.0-alpha",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^7.29.0",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^24.3.6",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^6.0.0",
+        "jest": "^27.0.4",
+        "jest-cucumber-fusion": "^0.8.1",
+        "prettier": "^2.3.2"
+    },
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+        }
+    },
+    "jest": {
+        "testMatch": [
+            "**/*.steps.js",
+            "**/*.test.js"
+        ],
+        "coveragePathIgnorePatterns": [
+            "/node_modules/",
+            "/test/"
+        ],
+        "coverageReporters": [
+            "json-summary",
+            "text",
+            "lcov"
+        ],
+        "coverageDirectory": "./coverage/",
+        "collectCoverage": true
     }
-  },
-  "jest": {
-    "testMatch": [
-      "**/*.steps.js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
-    ],
-    "coverageReporters": [
-      "json-summary",
-      "text",
-      "lcov"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
-  }
 }
