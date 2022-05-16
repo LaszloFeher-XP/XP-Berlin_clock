@@ -25,3 +25,4 @@
 ## 3. Pomodoro
 - refactor unit tests with using emojis
 - GIVEN the timestamp is 00:04:03 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ❌
+- GIVEN the timestamp is 00:04:03 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ✅

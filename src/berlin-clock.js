@@ -3,7 +3,7 @@ function berlinClock(timestamp) {
 }
 
 function berlinClockFiveHour(timestamp) {
-    if (timestamp == '00:00:00') {
+    if (timestamp.substring(0, 2) == '00') {
         return '⚫⚫⚫⚫';
     }
     return '🔴⚫⚫⚫';
