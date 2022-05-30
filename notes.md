@@ -31,3 +31,6 @@
 - GIVEN the timestamp is 04:05:23 WHEN coverting to Berlin time THEN the 5-hour row shows ⚫⚫⚫⚫ ✅
 - feature `04:13:24` test ✅
 - feature `05:25:19` test ✅
+
+## 4. Pomodoro
+- generated quality gate
